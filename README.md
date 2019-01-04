@@ -20,7 +20,7 @@ I'd prefer you to develop this code as you want.
 - pdfcrop
 
 ## Why I make this
-<--
+<!--
 Imagemagick has such kind of function, but unfortunately it convert beutiful vector format into argue lasterized format.
 -->
 
