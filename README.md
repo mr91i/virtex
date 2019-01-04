@@ -1,6 +1,32 @@
 # virtex
-Edit PDF figures with tex-commands
+Python code editing PDF figures by using Tex.
 
-This code is developed for oveplotting text on PDF figures wit keeping its vector style.
+## Code Description
+This code is developed for oveplotting text on PDF figures with keeping its vector format.
+This code depend on your tex-envirionment. Before use this, see inside the code. 
 
-This code depend on your tex setting. Before use this, correct the setting. 
+1. 
+2. 
+3.
+
+Note that this have been still developed. Also, you still need to tune the virtex.py so that it works.
+
+I'd prefer you to develop this code as you want.
+
+## What this need
+- python 
+- tex compiling system
+-- overpic
+- pdfcrop
+
+## Why I make this
+
+
+
+## How to use
+
+If you merge a.pdf and b.pdf, you just say in terminal:
+```virtex.py
+python virtex.py a.pdf b.pdf 
+```
+
