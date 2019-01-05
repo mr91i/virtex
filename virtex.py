@@ -27,7 +27,7 @@ if (args.overpic==None) or (len(args.overpic)==0):
 else:
 	overpic=args.overpic
 	if len(args.overpic)!=N:
-		print("Please prepare a list for doing overpic")
+		print("Please prepare a list for overpic")
 		exit()
 
 temp=r'''
@@ -45,11 +45,11 @@ temp=r'''
 '''
 
 for i,im in enumerate(args.ins) :
+#	temp+=f"\includegraphics[width={size}\hsize,clip]{{{im}}} "
 	print(i,im,overpic[i])
 	temp+=fr"\begin{{overpic}}[width={size}\hsize,clip]{{{im}}}"
 	temp+=fr"\put(15,52){{\large \bf	{overpic[i]}  }}" 
 	temp+=r"\end{overpic}"
-#	temp+=f"\includegraphics[width={size}\hsize,clip]{{{im}}} "
 	temp+="\\\\" if (i+1)%colN==0 else ""
 
 temp+=r'''
@@ -59,15 +59,9 @@ temp+=r'''
 
 print(temp)
 
-if args.out!=None:
-	out=args.out
-else:
-	out='temp'
-if args.dir!=None:
-	d=args.dir
-else:
-	d="./"
-outtex=out+'.tex'
+d     = args.dir if (args.dir != None) else "./"
+out   = args.out if (args.out != None) else 'temp'
+outtex= out+'.tex'
 
 f=open(d+outtex,'w')
 f.write( temp )
